@@ -2,10 +2,743 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mayush Timmapuram's Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon-dev.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    Hello World
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/headshot.png"
+              alt="Mayush Timmapuram"
+              width="80"
+              class="avatar-box"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Mayush Timmapuram">Mayush Timmapuram</h1>
+
+            <p class="title">Full-Stack Software Engineer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contact Info</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="mailto:mayushtim01@gmail.com" class="contact-link"
+                  >mayushtim01@gmail.com</a
+                >
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Buffalo, NY</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://github.com/tmayush"
+                class="social-link"
+                onclick="trackClick('Github')"
+              >
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/tmayush/"
+                class="social-link"
+                onclick="trackClick('LinkedIn')"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Background</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Publications</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I'm currently pursuing a Master's in Computer Science at the
+              University at Buffalo, with a passion for creating innovative
+              software solutions. My professional experience includes roles as a
+              Cloud & Backend Engineer at Kaleida Health, where I enhanced
+              application performance through AWS infrastructure management and
+              optimized backend services. Previously, as a Machine Learning
+              Intern at Quixy, I developed NLP-driven automation tools that
+              significantly improved operational efficiency.
+            </p>
+            <p>
+              My skill set spans full-stack development, cloud computing,
+              machine learning, and data engineering, complemented by a solid
+              foundation in languages such as Java, Python, JavaScript, Kotlin,
+              and SQL. I'm driven by curiosity, thrive in collaborative
+              environments, and am always eager to learn and implement new
+              technologies.
+            </p>
+            <p>
+              Outside of academics and professional work, I've actively
+              participated in hackathons and developer communities, reinforcing
+              my commitment to continuous learning and growth in tech.
+            </p>
+          </section>
+
+          <section class="service">
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <div class="icon-box">
+                    <a
+                      href="./assets/files/Mayush Timmapuram.pdf"
+                      download
+                      class="resume"
+                      onclick="trackClick('Resume')"
+                    >
+                      <ion-icon
+                        name="document-attach-outline"
+                        color="#03fc84"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Resum&eacute;</h4>
+                  <p class="service-item-text">Current as of 04/25/2025</p>
+                </div>
+              </li>
+
+              <!-- <li class="service-item">
+                <div class="service-icon-box">
+                  <div class="icon-box">
+                    <a
+                      href="./assets/files/CV_Simon_Benzer.pdf"
+                      download
+                      class="resume"
+                      onclick="trackClick('CV')"
+                    >
+                      <ion-icon
+                        name="document-attach-outline"
+                        color="#03fc84"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">CV</h4>
+
+                  <p class="service-item-text">Current as of 1/15/2025.</p>
+                </div>
+              </li> -->
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="background">
+          <header>
+            <h2 class="h2 article-title">Background</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">University at Buffalo</h4>
+
+                <span>2024 - Present</span>
+
+                <p class="timeline-text">
+                  Master's in Computer Science, Specialization in Artificial
+                  Intelligence. Current GPA: 3.4
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Osmania University</h4>
+
+                <span>2020 - 2024</span>
+
+                <p class="timeline-text">
+                  Bachelor's of Science in Computer Science, Concentration in
+                  Artifical Intelligence and Data Science
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="business-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Cloud & Backend Engineer</h4>
+
+                <h2 class="comp-name timeline-item-title">Kaleida Health</h2>
+
+                <span>Jan 2025 — May 2025</span>
+
+                <p class="timeline-text">
+                  • Managed AWS infrastructure for a full-stack application by
+                  deploying a Spring Boot backend on Elastic Beanstalk (using
+                  Nginx), hosting the frontend on EC2, and maintaining MySQL
+                  databases on RDS. <br />
+                  • Optimized API performance in the user authentication module
+                  by refactoring inefficient multi-table join queries into
+                  indexed queries, reducing response times by 35%. <br />
+                  • Developed and integrated new API endpoints to streamline
+                  data flow and enhance overall application functionality.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Machine Learning Intern</h4>
+
+                <h2 class="comp-name timeline-item-title">Quixy</h2>
+
+                <span>July 2023 — August 2023</span>
+
+                <p class="timeline-text">
+                  • Used spaCy to build custom NER pipelines automating business
+                  rules and collaborated with cross-functional teams to
+                  integrate these NLP models into daily operations, resulting in
+                  a 15% boost in entity extraction accuracy and a 10% reduction
+                  in processing times. <br />
+                  • Engineered custom actions triggered by natural language
+                  inputs for a no-code platform, reducing manual configuration
+                  time by 30%.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Lead Software Engineer</h4>
+
+                <h2 class="comp-name timeline-item-title">
+                  Halsys IT Solutions
+                </h2>
+
+                <span>August 2022 - October 2022</span>
+
+                <p class="timeline-text">
+                  • Developed and maintained ETL pipelines using Python, SQL,
+                  and Apache Spark, reducing data processing latency and
+                  ensuring timely delivery of analytics. <br />
+                  • Optimized SQL queries and implemented table partitioning in
+                  line with normalization practices, resulting in a measurable
+                  20% reduction in query execution times.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="skill">
+            <h3 class="h3 skills-title">My Skills</h3>
+
+            <ul class="skills-list content-card">
+              <li>
+                <div class="title-wrapper">
+                  <h5 class="h5">Programming Languages:</h5>
+                </div>
+
+                <div>
+                  <p>JavaScript, Python, R, Java, Kotlin, C++</p>
+                </div>
+                <br />
+              </li>
+
+              <li>
+                <div class="title-wrapper">
+                  <h5 class="h5">Frameworks/Libraries/Other</h5>
+                </div>
+
+                <div>
+                  <p>
+                    OpenCV, Tensorflow, Keras, Scikit-Learn, PyTorch, React,
+                    Express/NodeJS, MongoDB, SQL, HTML, CSS/Bootstrap, Bash,
+                    Electron, Spring Boot
+                  </p>
+                </div>
+                <br />
+              </li>
+
+              <li>
+                <div class="title-wrapper">
+                  <h5 class="h5">Software and Tools</h5>
+                </div>
+
+                <div>
+                  <p>
+                    Git, Github, Android Studio, Figma, Linux, JIRA, AWS, Google
+                    Cloud
+                  </p>
+                </div>
+                <br />
+              </li>
+
+              <!-- <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li> -->
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web Development</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>ML</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>DS</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>WebDevelopment</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>ML</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>DS</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item="webdev"
+                data-category="web development"
+              >
+                <a href="https://github.com/tmayush/Clubomania">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/Clubomania.png"
+                      alt="Raven's Progressive Matrices"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Clubomania</h3>
+
+                  <p class="project-category">Web Development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+                onclick="trackClick('Book Finder')"
+              >
+                <a href="https://github.com/tmayush/Grosto">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/grosto.png"
+                      alt="fundo"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Grosto</h3>
+
+                  <p class="project-category">Web Development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="ml"
+              >
+                <a
+                  href="https://github.com/tmayush/handwriting-to-text"
+                  onclick="trackClick('depster')"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/HTT.png"
+                      alt="Handwriting to Text Recognition"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Handwriting to Text Recognition</h3>
+
+                  <p class="project-category">ML</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="ds"
+              >
+                <a
+                  href="https://github.com/tmayush/WHI_Analysis"
+                  onclick="trackClick('selenium_seo')"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/WHI.png"
+                      alt="task manager"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">World Happiness Index</h3>
+
+                  <p class="project-category">DS</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a
+                  href="https://github.com/tmayush/erp_extraction"
+                  onclick="trackClick('package-loc')"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/projects/erp.png"
+                      alt="erp_extraction"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">ERP Data Extraction Tool</h3>
+
+                  <p class="project-category">Web Development</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #Publications/publications
+      -->
+
+        <article class="publications" data-page="publications">
+          <header>
+            <h2 class="h2 article-title">Publications</h2>
+          </header>
+
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a href="https://ieeexplore.ieee.org/document/10465497">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/projects/whi.png"
+                      alt="Osteopontin"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Social Data Science</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23"
+                        >Dec 15<sup>th</sup>, 2023</time
+                      >
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Understanding the Regional Differences in World Happiness
+                      Index Using Machine Learning
+                    </h3>
+
+                    <p class="blog-text">
+                      This study entails data collection, cleansing, and
+                      exploratory analysis to uncover variable correlations. It
+                      discovers key factors of national happiness levels through
+                      correlation heat map and feature selection.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!--
+    - click tracker
+  -->
+    <script>
+      // const scriptURL =
+      //   "https://script.google.com/macros/s/AKfycbxRg-37Iljk94FB5iQSknNsfr1NyFHbhg9t1xl59HNutYRCHXV_jScb5T_pXZThGhzx6w/exec";
+      async function trackClick(anAction) {
+        // try {
+        //   // event.preventDefault(); //pause download until after logging
+        //   const ipResponse = await fetch("https://api.ipify.org?format=json");
+        //   const ipData = await ipResponse.json();
+        //   const ipAddress = ipData.ip;
+        //   const data = {
+        //     ip: ipAddress,
+        //     timestamp: new Date().toISOString(),
+        //     action: anAction,
+        //   };
+        //   // const response = await fetch(scriptURL, {
+        //   //   method: "POST",
+        //   //   headers: {
+        //   //     "Content-Type": "application/json",
+        //   //   },
+        //   //   body: JSON.stringify(data),
+        //   //   mode: "no-cors",
+        //   // });
+        // } catch (error) {
+        //   console.error("Error logging click:", error);
+        // }
+      }
+    </script>
   </body>
 </html>
